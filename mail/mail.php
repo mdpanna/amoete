@@ -241,7 +241,7 @@ $headers.='From: mdpanna600@gmail.com';
 
         
 if(!mail($to,$subject,$message,$headers)){
-        echo  "Mailer Error: " . mail->ErrorInfo;
+        echo  "Mailer Error: ";
 }else{
     echo "Successfully sent!";
 }
