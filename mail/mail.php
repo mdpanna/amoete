@@ -235,13 +235,13 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 
-$to="mdpannasunny@gmail.com";
+$to=$email;
 
 $headers.='From: mdpanna600@gmail.com';
 
         
 if(!mail($to,$subject,$message,$headers)){
-        echo  "Mailer Error: " .mail->ErrorInfo;
+        echo  "Mailer Error: " . mail->ErrorInfo;
 }else{
     echo "Successfully sent!";
 }
