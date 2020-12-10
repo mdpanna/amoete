@@ -293,7 +293,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -328,7 +328,7 @@
                     processData: false,
                     success: function(data) {
                         $("#mail")[0].reset();
-                        swal("Gracias!", "Mensaje enviado ", "success");
+                       alert(data);
 
                     }
 
