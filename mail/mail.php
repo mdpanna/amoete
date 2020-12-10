@@ -229,42 +229,24 @@ $message="<!doctype html>
 
 
 
-require_once('class/PHPMailerAutoload.php');
 $subject='Mail from '.$email;
 
-$mail = new PHPMailer();
-
-$mail->IsSMTP();                      
-
-$mail->SMTPDebug = 0;                  
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 
-$mail->SMTPAuth = true;                
-$mail->SMTPSecure = "tls";              
-$mail->Host = "amoete.com";       
-$mail->Port = 587;                     
+$to="mdpannasunny@gmail.com";
 
-$mail->Username = "info@amoete.com"; 
-$mail->Password = "6K.KHLsbA=~4";     
+$headers.='From: mdpanna600@gmail.com';
 
-$mail->CharSet = 'windows-1250';
-$mail->SetFrom ('info@amoete.com', 'Message From amoete');
-$mail->AddAddress ( 'mdpanna600@gmail.com' );
-$mail->Subject = $subject;
-$mail->ContentType = 'text/plain';
-$mail->IsHTML(true);
-
-$mail->Body = $message; 
-
-
-if(!$mail->Send()){
+        
+if(mail($to,$subject,$message,$headers)){
         $error_message = "Mailer Error: " . $mail->ErrorInfo;
 }else{
     echo "Successfully sent!";
 }
 
 
-        
 
         
         
