@@ -240,8 +240,8 @@ $to="mdpannasunny@gmail.com";
 $headers.='From: mdpanna600@gmail.com';
 
         
-if(mail($to,$subject,$message,$headers)){
-        $error_message = "Mailer Error: " . $mail->ErrorInfo;
+if(!mail($to,$subject,$message,$headers)){
+        echo  "Mailer Error: " . $mail->ErrorInfo;
 }else{
     echo "Successfully sent!";
 }
